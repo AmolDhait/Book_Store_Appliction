@@ -8,6 +8,6 @@ import com.bridgelabz.BookStoreApplication.model.BookDetails;
 
 public interface BookDetailsRepository  extends JpaRepository<BookDetails, Integer> {
 
-    Optional<BookDetails> findById(int bookid);
+ //   Optional<BookDetails> findById(int bookid);
 
 }

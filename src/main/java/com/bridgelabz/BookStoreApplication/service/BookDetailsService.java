@@ -95,6 +95,7 @@ public class BookDetailsService implements IBookDetailsService {
             book.setBookQuantity(bookQuantity);
             bookRepo.save(book);
             return book;
+            
 
         } else {
             return null;

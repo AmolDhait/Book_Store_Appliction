@@ -73,7 +73,7 @@ public class BookDetailsController {
 
     }
     @PutMapping("/updatequantity/{bookId}")
-    public ResponseEntity<ResponseDTO> updateBookQuantity(@RequestHeader(name = "token") String token,@PathVariable int bookId, @RequestParam int bookQuantity) {
+    public ResponseEntity<ResponseDTO> updateBookQuantity(@RequestHeader(name = "token") String token,@PathVariable("bookId") int bookId, @RequestParam int bookQuantity) {
         BookDetails updateBookQuantity = bookService.updateBookQuantity(token,bookId, bookQuantity);
         ResponseDTO response = new ResponseDTO("Book Quantity Update is success for id " + bookId, updateBookQuantity);
         return new ResponseEntity<ResponseDTO>(response, HttpStatus.OK);
